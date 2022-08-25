@@ -129,9 +129,14 @@ function printLogHandler() {
 	for (let i = 0; i < 3; i++) {
 		console.log('-------');
 	}
-	for (let i = 10; i > 0; i--) {
-		console.log(i);
-	}
+	// for (let i = 10; i > 0; i--) {
+	// 	console.log(i);
+	// }
+	//!for (let i = 10; i > 0;) {
+	//!	i--; // this is initialized i before we do something with it
+	//! 	console.log(i);
+	//! }
+
 	console.log(battleLog);
 }
 
