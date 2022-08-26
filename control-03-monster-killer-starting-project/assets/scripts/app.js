@@ -136,7 +136,17 @@ function printLogHandler() {
 	//!	i--; // this is initialized i before we do something with it
 	//! 	console.log(i);
 	//! }
-
+	// for (let i = 0; i < battleLog.length; i++) {
+	// 	console.log(battleLog[i]);
+	// }
+	let i = 0;
+	for (const logEntry of battleLog) {
+		console.log(`#${i}`);
+		for (const key in logEntry) {
+			console.log(`${key} => ${logEntry[key]}`);
+		}
+		i++;
+	}
 	console.log(battleLog);
 }
 
