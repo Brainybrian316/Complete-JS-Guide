@@ -10,13 +10,21 @@ function getMaxLIfeValues() {
 
 	let parsedValue = parseInt(enteredValue);
 
-	if (isNaN(chosenMaxLife) || chosenMaxLife <= 0) {
+	if (isNaN(parsedValue) || parsedValue <= 0) {
 		throw { message: 'Invalid user input, not a number' };
 	}
 	return parsedValue;
 }
 
-let chosenMaxLife = getMaxLIfeValues();
+let chosenMaxLife;
+
+try {
+	chosenMaxLife = getMaxLIfeValues();
+} catch (error) {
+	console.log(error);
+	chosenMaxLife = 100;
+	alert('you entered something wrong, default value of 100 was used.');
+}
 
 let hasBonusLife = true;
 let currentMonsterHealth = chosenMaxLife;
