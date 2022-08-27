@@ -8,7 +8,7 @@ function number1() {
 	return alert(`your number is ${roundedNumber} which is not greater than 0.7`);
 }
 
-number1(randomNumber);
+number1();
 
 let nums = [1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -18,7 +18,7 @@ function array1() {
 	}
 }
 
-array1(nums);
+array1();
 
 function array2() {
 	let i = 0;
@@ -28,7 +28,17 @@ function array2() {
 	}
 }
 
-array2(nums);
+array2();
 
 const randomNumber2 = Math.random(); // produces random number between 0 (including) and 1 (excluding)
 const roundedNumber2 = Math.round(randomNumber * 10) / 10;
+
+function compare() {
+	if (roundedNumber && roundedNumber2 < 0.7) {
+		alert(`both numbers are greater than 0.7`);
+	} else if (roundedNumber > 0.2 || roundedNumber2 > 0.2) {
+		alert(`at least one of your numbers is not greater than 0.2`);
+	}
+}
+
+compare();
