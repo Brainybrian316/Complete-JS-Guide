@@ -50,3 +50,27 @@ if (randomNumber > 0.7) {
 } else {
 	alert('instructor not greater');
 }
+
+const instructorNums = [10, 20, 30, 40, 50, 60];
+
+for (let i = 0; i < instructorNums.length; i++) {
+	console.log(instructorNums[i]);
+}
+
+for (const num of instructorNums) {
+	console.log(num);
+}
+
+let counter = 0;
+while (counter < instructorNums.length) {
+	console.log(instructorNums[counter]);
+	counter++;
+}
+
+for (let i = instructorNums.length - 1; i >= 0; i--) {
+	console.log(instructorNums[i]);
+}
+
+if (randomNumber > 0.7 && randomNumber2) {
+	alert('instructor last task greater');
+}
