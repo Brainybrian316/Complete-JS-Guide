@@ -42,3 +42,11 @@ function compare() {
 }
 
 compare();
+
+//  ****************** Instructor solution ****************************
+
+if (randomNumber > 0.7) {
+	alert('instructor first task greater');
+} else {
+	alert('instructor not greater');
+}
