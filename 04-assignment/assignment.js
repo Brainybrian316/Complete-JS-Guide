@@ -71,6 +71,6 @@ for (let i = instructorNums.length - 1; i >= 0; i--) {
 	console.log(instructorNums[i]);
 }
 
-if (randomNumber > 0.7 && randomNumber2) {
+if ((randomNumber > 0.7 && randomNumber2) || randomNumber <= 0.2 || randomNumber2 <= 0.2) {
 	alert('instructor last task greater');
 }
