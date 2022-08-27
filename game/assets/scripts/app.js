@@ -17,6 +17,7 @@ let hasBonusLife = true;
 let currentMonsterHealth = chosenMaxLife;
 let currentPlayerHealth = chosenMaxLife;
 let battleLog = [];
+let lastLoggedEntry;
 const LOG_EVENT_PLAYER_ATTACK = 'PLAYER _ATTACK';
 const LOG_EVENT_PLAYER_STRONG_ATTACK = 'PLAYER_STRONG_ATTACK';
 const LOG_EVENT_MONSTER_ATTACK = 'MONSTER_ATTACK';
@@ -146,13 +147,16 @@ function printLogHandler() {
 	// }
 	let i = 0;
 	for (const logEntry of battleLog) {
-		console.log(`#${i}`);
-		for (const key in logEntry) {
-			console.log(`${key} => ${logEntry[key]}`);
+		if ((!lastLoggedEntry && lastLoggedEntry !== 0) || lastLoggedEntry < i) {
+			console.log(`#${i}`);
+			for (const key in logEntry) {
+				console.log(`${key} => ${logEntry[key]}`);
+			}
+			lastLoggedEntry = i;
+			break;
 		}
 		i++;
 	}
-	console.log(battleLog);
 }
 
 attackBtn.addEventListener('click', attackHandler);
