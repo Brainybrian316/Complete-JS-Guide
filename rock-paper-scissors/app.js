@@ -71,3 +71,52 @@ startGameBtn.addEventListener('click', () => {
 	alert(message);
 	gameIsRunning = false;
 });
+
+// // not related to the game
+// const restOperator = (a, b, ...numbers) => {
+// 	let sum = 0;
+// 	for (const num of numbers) {
+// 		sum += num;
+// 	}
+// };
+
+// const functionInAFunction = (a, b, ...numbers) => {
+// 	const validateNumber = (number) => {
+// 		return isNaN(number) ? 0 : number;
+// 	};
+// 	let sum = 0;
+// 	for (const num of numbers) {
+// 		sum += validateNumber(num);
+// 	}
+// 	return sum;
+// };
+
+//! alternative to rest operator only works with function keyword
+// const nativeArguments = function() {
+// 		let sum = 0;
+// 		for (const num of arguments) {
+// 			sum += num;
+// 		}
+// }
+
+// sumUp(1, 5, 10, -3, 6, 10);
+// sumUp(1, 5, 10, -3, 5, 10, 25, 88);
+
+// const customFunction = (resultHandler, ...numbers) => {
+// 	const validateNumber = (number) => {
+// 		return isNaN(number) ? 0 : number;
+// 	};
+// 	let sum = 0;
+// 	for (const num of numbers) {
+// 		sum += validateNumber(num);
+// 	}
+// 	resultHandler(sum);
+// };
+
+// const showResultOfCustomFunc = (result) => {
+// 	alert('the result after adding all numbers is: ' + result);
+// };
+
+// customFunction(showResultOfCustomFunc, 1, 5, 'fdsa', -3, 6, 10);
+
+// customFunction(showResultOfCustomFunc, 1, 5, -3, 6, 10);
