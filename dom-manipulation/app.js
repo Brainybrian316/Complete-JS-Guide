@@ -42,3 +42,9 @@ button.addEventListener('click', () => {
 	// */
 	section.classList.toggle('invisible');
 });
+
+// insertAdjacentHTML  is a good way to insert new html without rerendering all content via inner.HTML
+// document.createElement always called on the document. creates a new element for the html taking in one argument.
+// appendChild which takes in any node element which then can be manipulated
+// append is a way to insert a text node for example or multiple nodes separated by a comma
+//  cloneNode is a way to copy an element rather than move it
