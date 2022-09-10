@@ -37,6 +37,7 @@ const deleteMovieHandler = (movieId) => {
 	// alternative to above
 	// ul.removeChild(ul.children[movieIndex]);
 	closeMovieDeletionModal();
+	updateUI();
 };
 
 const closeMovieDeletionModal = () => {
