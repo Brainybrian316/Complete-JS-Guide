@@ -92,38 +92,77 @@
 
 // console.log(taxAdjustedPrices);
 
-const prices = [10.99, 5.99, 3.99, 6.59];
-const tax = 0.19;
+// const prices = [10.99, 5.99, 3.99, 6.59];
+// const tax = 0.19;
 
-const taxAdjustedPrices = prices.map((price, index, prices) => {
-	const priceObj = { index: index, taxAdjPrice: price * (1 + tax) }; //create an  object of our values in the prices array and update the prices
-	return priceObj;
-});
+// const taxAdjustedPrices = prices.map((price, index, prices) => {
+// 	const priceObj = { index: index, taxAdjPrice: price * (1 + tax) }; //create an  object of our values in the prices array and update the prices
+// 	return priceObj;
+// });
 
-console.log(prices, taxAdjustedPrices);
+// console.log(prices, taxAdjustedPrices);
 
-const sortedArray = prices.sort((a, b) => {
-	// sort() converts everything into  a string
-	if (a > b) {
-		return 1;
-	} else if (a === b) {
-		return 0;
-	} else {
-		return -1;
-	}
-});
+// const sortedArray = prices.sort((a, b) => {
+// 	// sort() converts everything into  a string
+// 	if (a > b) {
+// 		return 1;
+// 	} else if (a === b) {
+// 		return 0;
+// 	} else {
+// 		return -1;
+// 	}
+// });
 
-console.log(sortedArray);
-// console.log(sortedArray.reverse())
+// console.log(sortedArray);
+// // console.log(sortedArray.reverse())
 
-const filteredArray = prices.filter((price, index, prices) => {
-	return price > 6;
-});
+// const filteredArray = prices.filter((price, index, prices) => {
+// 	return price > 6;
+// });
 
-console.log(filteredArray);
+// console.log(filteredArray);
 
-const reduceMethodArray = prices.reduce((prevValue, currentValue, currentIndex, prices) => {
-	return prevValue + currentValue;
-}, 0);
+// const reduceMethodArray = prices.reduce((prevValue, currentValue, currentIndex, prices) => {
+// 	return prevValue + currentValue;
+// }, 0);
 
-console.log(reduceMethodArray);
+// console.log(reduceMethodArray);
+
+// * string methods for arrays
+// const data = 'new york;10.99;2000';
+
+// const splitArrayMethod = data.split(';'); //returns an array
+// splitArrayMethod[1] = +splitArrayMethod[1];
+// console.log(splitArrayMethod);
+
+// const joinArrayMethod = ['Max', 'Jones'];
+// const aName = joinArrayMethod.join(' ');
+// console.log(aName);
+
+// const copiedArray = [...joinArrayMethod, 'billy'];
+// console.log(joinArrayMethod, 'Copied Array:', copiedArray);
+
+//  * object are reference values. cannot be copied until an array only their addresses. here is an alternative to get the data separated.
+// const persons = [
+// 	{ name: 'bob', age: 30 },
+// 	{ name: 'sally', age: 32 },
+// ];
+
+// const copiedPersons = [...persons.map((person) => ({ name: person.name, age: person.age }))];
+
+// persons.push({ name: 'Anna', age: 29 });
+// persons[0].age = 31;
+// console.log('originalArray:', persons, copiedPersons); // notice how the copied array is different than persons array
+
+// *array destructuring
+
+const nameData = ['max', 'jones', 'mr', 30];
+
+const [firstName, lastName] = nameData; //pulls out elements into a variable
+console.log(firstName);
+console.log(lastName);
+
+const spreadOperatorDestructuring = ['max', 'jones', 'mr', 30];
+
+const [first, last, ...otherInfo] = spreadOperatorDestructuring;
+console.log(first, last, otherInfo);
