@@ -76,18 +76,54 @@
 
 // console.log(arrayIndex);
 
+// const prices = [10.99, 5.99, 3.99, 6.59];
+// const tax = 0.19;
+// const taxAdjustedPrices = [];
+
+// //  for loop route
+// // for (const price of prices) {
+// // 	taxAdjustedPrices.push(price * (1 + tax));
+// // }
+
+// prices.forEach((price, index, prices) => {
+// 	const priceObj = { index: index, taxAdjPrice: price * (1 + tax) }; //create an  object of our values in the prices array and update the prices
+// 	taxAdjustedPrices.push(priceObj);
+// });
+
+// console.log(taxAdjustedPrices);
+
 const prices = [10.99, 5.99, 3.99, 6.59];
 const tax = 0.19;
-const taxAdjustedPrices = [];
 
-//  for loop route
-// for (const price of prices) {
-// 	taxAdjustedPrices.push(price * (1 + tax));
-// }
-
-prices.forEach((price, index, prices) => {
+const taxAdjustedPrices = prices.map((price, index, prices) => {
 	const priceObj = { index: index, taxAdjPrice: price * (1 + tax) }; //create an  object of our values in the prices array and update the prices
-	taxAdjustedPrices.push(priceObj);
+	return priceObj;
 });
 
-console.log(taxAdjustedPrices);
+console.log(prices, taxAdjustedPrices);
+
+const sortedArray = prices.sort((a, b) => {
+	// sort() converts everything into  a string
+	if (a > b) {
+		return 1;
+	} else if (a === b) {
+		return 0;
+	} else {
+		return -1;
+	}
+});
+
+console.log(sortedArray);
+// console.log(sortedArray.reverse())
+
+const filteredArray = prices.filter((price, index, prices) => {
+	return price > 6;
+});
+
+console.log(filteredArray);
+
+const reduceMethodArray = prices.reduce((prevValue, currentValue, currentIndex, prices) => {
+	return prevValue + currentValue;
+}, 0);
+
+console.log(reduceMethodArray);
