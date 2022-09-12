@@ -156,13 +156,13 @@
 
 // *array destructuring
 
-const nameData = ['max', 'jones', 'mr', 30];
+// const nameData = ['max', 'jones', 'mr', 30];
 
-const [firstName, lastName] = nameData; //pulls out elements into a variable
-console.log(firstName);
-console.log(lastName);
+// const [firstName, lastName] = nameData; //pulls out elements into a variable
+// console.log(firstName);
+// console.log(lastName);
 
-const spreadOperatorDestructuring = ['max', 'jones', 'mr', 30];
+// const spreadOperatorDestructuring = ['max', 'jones', 'mr', 30];
 
-const [first, last, ...otherInfo] = spreadOperatorDestructuring;
-console.log(first, last, otherInfo);
+// const [first, last, ...otherInfo] = spreadOperatorDestructuring;
+// console.log(first, last, otherInfo);
